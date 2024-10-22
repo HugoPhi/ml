@@ -1,5 +1,6 @@
 import hym.DecisionTree as dst
 import numpy as np
+import pandas as pd
 
 # watermelon
 attr_dict = {
@@ -34,6 +35,12 @@ data = np.array([
 # Labels for "好瓜" (0 = 否, 1 = 是)
 labels = np.array([1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0])
 
+labels_str = np.where(labels == 1, '好瓜', '坏瓜')
+df = pd.DataFrame(data, columns=attr_dict.keys())
+
+df['label'] = labels_str
+# print(df)
+
 # shuffle
 # shuffle_ix = np.random.permutation(len(data))
 # data = data[shuffle_ix]
@@ -41,20 +48,27 @@ labels = np.array([1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0])
 
 train_ix = np.array([1, 2, 3, 6, 7, 10, 14, 15, 16, 17]) - 1
 valid_ix = np.array([4, 5, 8, 9, 11, 12, 13]) - 1
-train_data = np.array([data[i] for i in train_ix])
-train_labels = np.array([labels[i] for i in train_ix])
-valid_data = np.array([data[i] for i in valid_ix])
-valid_labels = np.array([labels[i] for i in valid_ix])
+# train_data = np.array([data[i] for i in train_ix])
+# train_labels = np.array([labels[i] for i in train_ix])
+# valid_data = np.array([data[i] for i in valid_ix])
+# valid_labels = np.array([labels[i] for i in valid_ix])
 
 for way in ['none', 'pre', 'post']:
-    print(f'mine: {way}')
-    tree = dst.DecisionTree(train_data, train_labels, attr_dict, valid=valid_data, valid_label=valid_labels, pruning=way)
+    print(f'>> mine: {way}')
+    # print(labels)
+    tree = dst.ID3(df=df, valid_ix=valid_ix, pruning=way)
+    # print(attr_dict)
+    # print(train_ix)
     tree.fit()
 
+    _, _, valid_data, valid_labels, _, _ = tree.datas()
+
     res = tree(valid_data)
-    print(res)
-    print(valid_labels)
+    print(f'mine res: {res}')
+    print(f'valid:    {valid_labels}')
     print('mine acc: ', np.mean(res == valid_labels))
+    print()
     print('tree is: ')
     print(tree.tree)
+    print()
     print()
