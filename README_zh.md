@@ -195,6 +195,6 @@ test/
 
 如果您觉得本项目对您有帮助，欢迎 [⭐️ Star](https://github.com/HugoPhi/MachineLearningLabs) 支持我们！
 
-[![GitHub stars](https://img.shields.io/github/stars/HugoPhi/MachineLearningLabs.svg?style=social&label=Star)](https://github.com/HugoPhi/MachineLearningLabs)
+[![Star History Chart](https://api.star-history.com/svg?repos=HugoPhi/MachineLearningLabs&type=Timeline)](https://star-history.com/#HugoPhi/MachineLearningLabs&Timeline)
 
 ---

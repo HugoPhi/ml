@@ -195,6 +195,9 @@ This project is licensed under the [MIT License](LICENSE). For details, please r
 
 If you find this project helpful, please [⭐️ Star](https://github.com/HugoPhi/MachineLearningLabs) to support us!
 
-[![GitHub stars](https://img.shields.io/github/stars/HugoPhi/MachineLearningLabs.svg?style=social&label=Star)](https://github.com/HugoPhi/MachineLearningLabs)
+[![Star History Chart](https://api.star-history.com/svg?repos=HugoPhi/MachineLearningLabs&type=Timeline)](https://star-history.com/#HugoPhi/MachineLearningLabs&Timeline)
 
 ---
+
+
+
