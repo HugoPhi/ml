@@ -10,6 +10,11 @@ class ID3(DecisionTree):
         # print(data.shape)
         # print(train_ix)
 
+        # shuffle
+        # shuffle_ix = np.random.permutation(len(data))
+        # data = data[shuffle_ix]
+        # labels = labels[shuffle_ix]
+
         if valid_rate != 0:
             SPLIT = int(data.shape[0] * valid_rate)
             self.valid = data[:-SPLIT]
