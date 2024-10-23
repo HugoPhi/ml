@@ -3,9 +3,9 @@ import numpy as np
 
 
 def load_df(path):
-    if path.endwith('.csv'):
+    if path.endswith('.csv'):
         df = pd.read_csv(path)
-    elif path.endwith('.xlsx'):
+    elif path.endswith('.xlsx'):
         df = pd.read_excel(path)
     else:
         df = None
