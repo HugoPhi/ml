@@ -171,9 +171,9 @@ test/
     - [x] iris 
   - [x] Decision Tree
     - [x] watermelon2.0
-    - [ ] iris
+    - [x] iris
     - [ ] ice-cream
-    - [ ] wine quality
+    - [x] wine quality
     - [ ] house price
   - [ ] Support Vector Machine
   - [ ] Neural Network
