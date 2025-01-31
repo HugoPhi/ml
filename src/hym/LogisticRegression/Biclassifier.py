@@ -39,6 +39,7 @@ class BiClassfier:
         y_pred = sigmoid(x @ self.w.T + self.b)
         y_pred = (y_pred >= threshold).astype(int)
 
+
         return y_pred
 
     def history(self):  # history of loss
