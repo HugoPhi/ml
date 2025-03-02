@@ -1,0 +1,3 @@
+# ML by Hand
+
+This is a repo to write ml algorithms by hand from scratch, using basic lib such as numpy, matplotlib, pandas ...
